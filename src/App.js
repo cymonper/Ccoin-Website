@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, CardGroup, Button, Carousel, Accordion } from "react-bootstrap";
+import { Card, CardGroup, Button } from "react-bootstrap";
 import dp from "./dp.svg";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 
