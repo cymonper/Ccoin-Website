@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.money {
+  font-size: 25px;
+  color: Green;
+  text-shadow: 1px 1px 2px #00000059;
+  font-family: Arial;
+}
+
+.profilebackground {
+  background: rgb(255, 193, 7) !important;
+  align-items: center;
+}
+
+.header {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #00000059;
+}
+
+.list {
+  font-size: 11px;
+  color: #282c34;
+}
+
+.transaction {
+  font-size: 20px;
+  color: rgb(233, 72, 8);
+  text-shadow: 1px 1px 2px #00000059;
+  font-family: Arial;
+}
