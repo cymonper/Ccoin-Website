@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap");
 .App {
   text-align: center;
 }
@@ -40,28 +42,44 @@
 .money {
   font-size: 25px;
   color: Green;
-  text-shadow: 1px 1px 2px #00000059;
-  font-family: Arial;
+  text-shadow: 0.5px 0.5px 1px #282c34;
 }
 
 .profilebackground {
-  background: rgb(255, 193, 7) !important;
+  background: rgb(252, 213, 53) !important;
   align-items: center;
 }
 
+.profilebackgroundone {
+  text-align: center;
+
+  background: rgb(43, 49, 57) !important;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #fafafa;
+  text-shadow: 0.5px 0.5px 1.2px #fafafa;
+}
+
 .header {
-  font-size: 20px;
-  text-shadow: 1px 1px 2px #00000059;
+  font-size: 21px;
+  font-weight: 300;
+  color: #282c34;
+  text-shadow: 0.5px 0.5px 1px #282c34;
 }
 
 .list {
-  font-size: 11px;
+  font-size: 9px;
   color: #282c34;
 }
 
 .transaction {
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(233, 72, 8);
-  text-shadow: 1px 1px 2px #00000059;
-  font-family: Arial;
+  text-shadow: 0.5px 0.5px 1px #00000059;
+}
+
+.btnstyle {
+  background: rgb(252, 213, 53) !important;
+  color: #282c34 !important;
 }

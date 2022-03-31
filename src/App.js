@@ -5,10 +5,19 @@ import { Card, CardGroup, Button } from "react-bootstrap";
 import dp from "./dp.svg";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 
+//Change UserName function
+function edit() {
+  var uname = document.getElementById("cusername").value;
+  document.getElementById("edit").innerHTML = uname;
+}
+
+// Here the default account money is set to 400 and array is initialized
 function App() {
   var accountbalance = 400;
   const list = document.getElementById("list");
   var arr = [];
+
+  // Withdraw coins function
 
   function manualtransfer() {
     var mt = document.getElementById("manualtransfer").value;
@@ -31,6 +40,8 @@ function App() {
     }
   }
 
+  //Deposit coin function
+
   function addmanual() {
     var at = document.getElementById("addmanual").value;
     accountbalance = parseInt(accountbalance) + parseInt(at);
@@ -38,7 +49,6 @@ function App() {
     if (accountbalance < 0) {
       accountbalance = 0;
       arr.push(0);
-
       alert("Insufficient Ccoins");
     } else {
       document.getElementById("acc").innerHTML = accountbalance + " " + "C";
@@ -54,16 +64,7 @@ function App() {
     }
   }
 
-  function edit() {
-    var uname = document.getElementById("cusername").value;
-    document.getElementById("edit").innerHTML = uname;
-  }
-
-  function about() {
-    alert(
-      "Hello, Its me Cymon, I have done a basic web frontend implementation of cryptocurrency named Ccoin. "
-    );
-  }
+  // Trade all coins functions
 
   function trade() {
     alert("All Ccoins Traded");
@@ -78,12 +79,22 @@ function App() {
       .join("");
   }
 
+  function clearhistory() {
+    document.getElementById("list").innerHTML = "";
+    arr = [];
+  }
+
+  // About this page function
+  function about() {
+    alert(
+      "Hello, Its me Cymon, I have done a basic web frontend implementation of cryptocurrency named Ccoin. "
+    );
+  }
   return (
-    <div style={{ margin: "5%" }}>
+    <div style={{ margin: "5%", fontFamily: "IBM Plex Sans" }}>
       <div>
         <CardGroup>
-          <Card className="profilebackground">
-            {" "}
+          <Card className="profilebackgroundone">
             <Card.Img
               variant="top"
               src={dp}
@@ -97,16 +108,11 @@ function App() {
               }}
             />
             <Card.Body>
-              <Card.Title style={{ textAlign: "center" }}>
-                <div className="header" id="edit">
-                  User000
-                </div>
-              </Card.Title>
-              <Card.Text></Card.Text>
+              <div id="edit">User000</div>
             </Card.Body>
           </Card>
           <Card
-            className="profilebackground "
+            className="profilebackground"
             style={{ textAlign: "center", verticalAlign: "baseline" }}
           >
             <Card.Body>
@@ -130,7 +136,7 @@ function App() {
       </div>
       <div>
         <CardGroup>
-          <Card style={{ textAlign: "center" }}>
+          <Card style={{ textAlign: "center", background: "#fafafa" }}>
             <Card.Body>
               <Card.Title>
                 <div className="header">Withdraw Ccoins</div>
@@ -143,13 +149,13 @@ function App() {
               <br />
               <br />
 
-              <Button variant="danger" onClick={manualtransfer}>
+              <Button className="btnstyle" onClick={manualtransfer}>
                 {" "}
                 Withdraw
               </Button>
             </Card.Body>
           </Card>
-          <Card style={{ textAlign: "center" }}>
+          <Card style={{ textAlign: "center", background: "#fafafa" }}>
             <Card.Body>
               <div>
                 <Card.Title>
@@ -162,14 +168,14 @@ function App() {
                 ></input>
                 <br />
                 <br />
-                <Button variant="success" onClick={addmanual}>
+                <Button className="btnstyle" onClick={addmanual}>
                   {" "}
                   Deposit
                 </Button>
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ textAlign: "center" }}>
+          <Card style={{ textAlign: "center", background: "#fafafa" }}>
             <Card.Body>
               <Card.Title>
                 <div className="header">Transaction History</div>
@@ -178,6 +184,10 @@ function App() {
               <div className="list">
                 <ul id="list"></ul>
               </div>
+              <Button className="btnstyle" onClick={clearhistory}>
+                {" "}
+                Clear History
+              </Button>
             </Card.Body>
           </Card>
         </CardGroup>
@@ -185,7 +195,7 @@ function App() {
       <div>
         {" "}
         <CardGroup style={{ textAlign: "center" }}>
-          <Card>
+          <Card style={{ background: "#fafafa" }}>
             <Card.Body>
               <Card.Title>
                 <div className="header">Trade</div>
@@ -204,12 +214,12 @@ function App() {
                   19600 AUD
                 </div>
               </Card.Text>
-              <Button variant="success" onClick={trade}>
+              <Button className="btnstyle" onClick={trade}>
                 Trade All Ccoins
               </Button>
             </Card.Body>
           </Card>
-          <Card>
+          <Card style={{ background: "#fafafa" }}>
             <Card.Body>
               <Card.Title>
                 <div className="header">Account Settings</div>
@@ -218,11 +228,11 @@ function App() {
                 Change AccountName <input type="text" id="cusername"></input>
               </Card.Text>
               <Card.Text>
-                <Button size="sm" variant="primary" onClick={edit}>
+                <Button size="sm" className="btnstyle" onClick={edit}>
                   Submit
                 </Button>{" "}
               </Card.Text>
-              <Button variant="warning" onClick={about} size="sm">
+              <Button onClick={about} size="sm" className="btnstyle">
                 About This Page
               </Button>{" "}
             </Card.Body>
