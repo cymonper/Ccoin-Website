@@ -52,13 +52,22 @@
 
 .profilebackgroundone {
   text-align: center;
-
   background: rgb(43, 49, 57) !important;
   align-items: center;
   font-size: 25px;
   font-weight: 500;
   color: #fafafa;
   text-shadow: 0.5px 0.5px 1.2px #fafafa;
+}
+.profilebackgroundtwo {
+  text-align: center;
+
+  background: rgb(43, 49, 57) !important;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  color: #fafafa91;
+  text-shadow: 0px 0px 0px #fafafa;
 }
 
 .header {

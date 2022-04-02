@@ -1,26 +1,30 @@
 import "./App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, CardGroup, Button } from "react-bootstrap";
+import { Card, CardGroup, Button, Form } from "react-bootstrap";
 import dp from "./dp.svg";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 
 //Change UserName function
+
 function edit() {
   var uname = document.getElementById("cusername").value;
   document.getElementById("edit").innerHTML = uname;
+  alert("username changed");
 }
 
 // Here the default account money is set to 400 and array is initialized
+
 function App() {
   var accountbalance = 400;
   const list = document.getElementById("list");
+
   var arr = [];
 
   // Withdraw coins function
 
   function manualtransfer() {
     var mt = document.getElementById("manualtransfer").value;
+
     accountbalance = accountbalance - mt;
     var aud = accountbalance * 49;
     if (accountbalance < 0) {
@@ -28,12 +32,12 @@ function App() {
       arr.push(0);
       alert("insufficient Ccoins");
     } else {
-      document.getElementById("acc").innerHTML = accountbalance + " " + "C";
-      document.getElementById("acc2").innerHTML = accountbalance + " " + "C";
+      document.getElementById("acc").innerHTML = accountbalance + " " + "₡";
+      document.getElementById("acc2").innerHTML = accountbalance + " " + "₡";
       document.getElementById("rtrans").innerHTML =
-        mt + " " + "Ccoins Withdrawn";
+        mt + " " + "₡ coins Withdrawn";
       document.getElementById("aud").innerHTML = aud + " " + "Aud";
-      arr.push(mt, "Ccoins Withdrawn");
+      arr.push(mt, "₡ coins Withdrawn");
       document.getElementById("list").innerHTML = arr
         .map((i) => `<li>${i}</li>`)
         .join("");
@@ -51,16 +55,15 @@ function App() {
       arr.push(0);
       alert("Insufficient Ccoins");
     } else {
-      document.getElementById("acc").innerHTML = accountbalance + " " + "C";
-      document.getElementById("acc2").innerHTML = accountbalance + " " + "C";
+      document.getElementById("acc").innerHTML = accountbalance + " " + "₡";
+      document.getElementById("acc2").innerHTML = accountbalance + " " + "₡";
       document.getElementById("rtrans").innerHTML =
-        at + " " + "Ccoins Deposited";
+        at + " " + "₡ coins Deposited";
       document.getElementById("aud").innerHTML = aud + " " + "Aud";
-      arr.push(at, "Ccoins Deposited");
+      arr.push(at, "₡ coins Deposited");
       document.getElementById("list").innerHTML = arr
         .map((arr) => `<li>${arr}</li>`)
         .join("");
-      console.log(arr);
     }
   }
 
@@ -78,6 +81,7 @@ function App() {
       .map((i) => `<li>${i}</li>`)
       .join("");
   }
+  // Clear history function
 
   function clearhistory() {
     document.getElementById("list").innerHTML = "";
@@ -85,11 +89,18 @@ function App() {
   }
 
   // About this page function
+
   function about() {
     alert(
       "Hello, Its me Cymon, I have done a basic web frontend implementation of cryptocurrency named Ccoin. "
     );
   }
+  //Time and Date
+  var today = new Date();
+  var time = today.getHours() + ":" + today.getMinutes();
+  var date =
+    today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+
   return (
     <div style={{ margin: "5%", fontFamily: "IBM Plex Sans" }}>
       <div>
@@ -109,6 +120,9 @@ function App() {
             />
             <Card.Body>
               <div id="edit">User000</div>
+              <div className="profilebackgroundtwo" id="dnt">
+                Logged in at : {time} {date}
+              </div>
             </Card.Body>
           </Card>
           <Card
@@ -117,11 +131,13 @@ function App() {
           >
             <Card.Body>
               <Card.Title>
-                <div className="header">Account Balance</div>
+                <div className="header" style={{ marginTop: "5%" }}>
+                  Account Balance
+                </div>
               </Card.Title>
               <Card.Text>
                 <div id="acc" className="money">
-                  400 C
+                  400 ₡
                 </div>
                 <div>
                   Last Transaction :
@@ -204,7 +220,7 @@ function App() {
                 <Card.Text>
                   Current Holding In Ccoin
                   <div id="acc2" className="money">
-                    400 C
+                    400 ₡
                   </div>
                 </Card.Text>
               </div>
