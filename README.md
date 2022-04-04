@@ -1,7 +1,7 @@
 # Ccoin-Website
 - 👨‍💻 All of my projects are available at [https://github.com/cymonper/](https://github.com/cymonper/)
 
-- GH-Pages Link [https://cymonper.github.io/Ccoin-website/](https://cymonper.github.io/Ccoin-website/)
+- GH-Pages Link [https://cymonper.github.io/Ccoin-Website/](https://cymonper.github.io/Ccoin-Website/)
 
 - 📫 How to reach me **cymonpereira@gmail.com**
 
