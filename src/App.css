@@ -91,4 +91,5 @@
 .btnstyle {
   background: rgb(252, 213, 53) !important;
   color: #282c34 !important;
+  box-shadow: 2px 2px 2px #00000059;
 }
