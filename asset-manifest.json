@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Ccoin-Website/static/css/main.eef194d1.css",
+    "main.css": "/Ccoin-Website/static/css/main.5e10da94.css",
     "main.js": "/Ccoin-Website/static/js/main.8b0fac5c.js",
     "static/media/dp.svg": "/Ccoin-Website/static/media/dp.3b5c1c1cb23b8f99737a4585a2d19bd9.svg",
     "index.html": "/Ccoin-Website/index.html",
-    "main.eef194d1.css.map": "/Ccoin-Website/static/css/main.eef194d1.css.map",
+    "main.5e10da94.css.map": "/Ccoin-Website/static/css/main.5e10da94.css.map",
     "main.8b0fac5c.js.map": "/Ccoin-Website/static/js/main.8b0fac5c.js.map"
   },
   "entrypoints": [
-    "static/css/main.eef194d1.css",
+    "static/css/main.5e10da94.css",
     "static/js/main.8b0fac5c.js"
   ]
 }
