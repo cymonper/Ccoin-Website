@@ -22,7 +22,7 @@ function App() {
 
   // Withdraw coins function
 
-  function manualtransfer() {
+  function withdraw() {
     var mt = document.getElementById("manualtransfer").value;
 
     accountbalance = accountbalance - mt;
@@ -46,11 +46,13 @@ function App() {
 
   //Deposit coin function
 
-  function addmanual() {
+  function deposit() {
     var at = document.getElementById("addmanual").value;
     accountbalance = parseInt(accountbalance) + parseInt(at);
     var aud = accountbalance * 49;
-    if (accountbalance < 0) {
+    if (deposit === null) {
+      console.log("noinput");
+    } else if (accountbalance < 0) {
       accountbalance = 0;
       arr.push(0);
       alert("Insufficient Ccoins");
@@ -165,7 +167,7 @@ function App() {
               <br />
               <br />
 
-              <Button className="btnstyle" onClick={manualtransfer}>
+              <Button className="btnstyle" onClick={withdraw}>
                 {" "}
                 Withdraw
               </Button>
@@ -184,7 +186,7 @@ function App() {
                 ></input>
                 <br />
                 <br />
-                <Button className="btnstyle" onClick={addmanual}>
+                <Button className="btnstyle" onClick={deposit}>
                   {" "}
                   Deposit
                 </Button>
